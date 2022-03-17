@@ -17,6 +17,7 @@ const item = images.flatMap((element) => `<li><img src='${element.url}' alt='${e
 console.log(item);
 
 const list = document.querySelector('.gallery');
+
 list.insertAdjacentHTML("beforeend", item);
 
 

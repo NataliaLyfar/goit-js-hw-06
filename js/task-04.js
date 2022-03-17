@@ -22,7 +22,6 @@ CounterPlugin.prototype._bindEvents = function () {
     this.updateValueUI();
     });
     
-
     this._refs.decrementBtn.addEventListener('click', () => {
     this.decrement();
     this.updateValueUI();
@@ -41,5 +40,4 @@ CounterPlugin.prototype.decrement = function () {
 }
 
 const counter = new CounterPlugin({rootSelector: '#counter', step: 10});
-
 console.log('counter', counter);
