@@ -27,6 +27,8 @@ return refs.basicBox.append(...boxes);
 const destroyBoxes = () => {
   const boxes = refs.basicBox.querySelectorAll("div");
   boxes.forEach((box) => box.remove());
+  
+  refs.amountField.value = null;
 };
 
 refs.createBtn.addEventListener("click", () => createBoxes(refs.amountField.value));
