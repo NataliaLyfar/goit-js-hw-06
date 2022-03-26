@@ -12,11 +12,15 @@ function onFormSubmit (event) {
 //     console.log('onFormSubmit -> value', value);
 // });
 
-const { elements: { email, password } } = event.currentTarget;
+const dataEl = event.currentTarget.elements;
+const email = dataEl.email.value;
+const password = dataEl.password.value;
+const data = {email, password};
 
-if (email.value === "" || password.value === "") {
+if (email === "" || password === "") {
     return alert("Please fill in all the fields!");
   }
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+console.log(data);
+
   event.currentTarget.reset();
 };
