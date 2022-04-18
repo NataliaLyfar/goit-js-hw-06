@@ -29,6 +29,8 @@ const destroyBoxes = () => {
   boxes.forEach((box) => box.remove());
   
   refs.amountField.value = null;
+  width = 30;
+  height = 30;
 };
 
 refs.createBtn.addEventListener("click", () => createBoxes(refs.amountField.value));
